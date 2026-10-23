@@ -1,0 +1,59 @@
+# Тесты первой версии (v1) — как их написал агент
+
+```
+$ go test -v ./...
+=== RUN   TestChunkDocument
+--- PASS: TestChunkDocument (0.00s)
+=== RUN   TestChunkEmptyDocument
+--- PASS: TestChunkEmptyDocument (0.00s)
+=== RUN   TestEmbedReturnsVector
+--- PASS: TestEmbedReturnsVector (0.01s)
+=== RUN   TestEmbedBatch
+--- PASS: TestEmbedBatch (0.02s)
+=== RUN   TestStoreOpen
+--- PASS: TestStoreOpen (0.00s)
+=== RUN   TestStoreUpsertDocument
+--- PASS: TestStoreUpsertDocument (0.01s)
+=== RUN   TestStoreStats
+--- PASS: TestStoreStats (0.00s)
+=== RUN   TestSearchReturnsResults
+--- PASS: TestSearchReturnsResults (0.03s)
+=== RUN   TestSearchTopK
+--- PASS: TestSearchTopK (0.01s)
+=== RUN   TestSearchEmptyQuery
+--- PASS: TestSearchEmptyQuery (0.00s)
+=== RUN   TestAPIReturns200
+--- PASS: TestAPIReturns200 (0.04s)
+=== RUN   TestAPISearch
+--- PASS: TestAPISearch (0.04s)
+PASS
+ok      kbsearch  0.18s
+
+Покрытие: 84% (go test -cover)
+```
+
+## Что здесь проверяется
+
+| Тест | Что проверяет |
+|---|---|
+| ChunkDocument | что чанкер вообще что-то возвращает |
+| ChunkEmptyDocument | что пустой документ не падает |
+| EmbedReturnsVector | что эмбеддер вернул вектор |
+| EmbedBatch | что батч из двух текстов вернул два вектора |
+| StoreOpen | что база открывается |
+| StoreUpsertDocument | что документ записался |
+| StoreStats | что счётчики считаются |
+| SearchReturnsResults | что поиск вернул непустой список |
+| SearchTopK | что вернулось не больше K результатов |
+| SearchEmptyQuery | что пустой запрос не падает |
+| APIReturns200 | что ручка отвечает 200 |
+| APISearch | что ручка что-то вернула |
+
+## Чего здесь нет
+
+- ни одного теста на **удаление** документа;
+- ни одного теста на **пустой индекс** (что вернётся `[]`, а не 500);
+- ни одного теста на **смену модели** эмбеддингов;
+- ни одного теста на **качество выдачи** (что найден именно нужный документ).
+
+Все 12 тестов проверяют, что код не падает. Ни один не проверяет, что фича работает.

@@ -1,0 +1,11 @@
+# Бинарник
+kbsearch
+
+# Рабочие копии индекса (переключаются demo/reset.sh)
+kb.sqlite
+kb.sqlite-shm
+kb.sqlite-wal
+
+# Служебное
+.DS_Store
+*.log

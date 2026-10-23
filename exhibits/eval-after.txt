@@ -1,0 +1,16 @@
+profile: fixed   k=12   top=5
+
+✓ rank=3     66ms  почему агент рисует C4, которая в… → 20-PRACTICE-PROJECT
+✓ rank=1     54ms  что писать в ADR кроме плюсов      → 02-theory-rfc-design-doc-adr
+✓ rank=2     64ms  как отделить деплой от включения … → 07-speaker-script
+✗ rank=0     57ms  что делать, когда документ удалили → 02-theory-rfc-design-doc-adr
+✓ rank=2     53ms  как считать стоимость техническог… → company-stage-framework
+✓ rank=1     54ms  blameless postmortem               → 08-theory-operations-incidents-postmortems
+✓ rank=1     61ms  fan-out on write и проблема селеб… → 00-intro-video-SCRIPT
+✓ rank=1     55ms  как глубина документов зависит от… → product-overview
+✓ rank=1     52ms  сколько стоит пакет теория плюс п… → iamlead-course-brochure
+✓ rank=2     59ms  как описать инвариант агрегата     → 04-speaker-script
+✓ rank=3     55ms  что писать в Non-Goals             → 20-PRACTICE-PROJECT
+✓ rank=1     57ms  как проверить, что релиз безопасен → 07-theory-testing-release-launch
+
+recall@3 = 0.92   MRR = 0.68   p95 = 64 ms   n=12

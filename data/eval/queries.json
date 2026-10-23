@@ -1,0 +1,14 @@
+[
+  {"q": "почему агент рисует C4, которая выглядит убедительно", "expect": ["03-theory-c4-architecture-boundaries"]},
+  {"q": "что писать в ADR кроме плюсов", "expect": ["02-theory-rfc-design-doc-adr"]},
+  {"q": "как отделить деплой от включения трафика", "expect": ["07-theory-testing-release-launch"]},
+  {"q": "что делать, когда документ удалили", "expect": ["20-PRACTICE-PROJECT"]},
+  {"q": "как считать стоимость технического долга", "expect": ["06-theory-delivery-planning-technical-debt"]},
+  {"q": "blameless postmortem", "expect": ["08-theory-operations-incidents-postmortems"]},
+  {"q": "fan-out on write и проблема селебрити", "expect": ["00-intro-video-SCRIPT"]},
+  {"q": "как глубина документов зависит от стадии компании", "expect": ["product-overview", "company-stage-framework"]},
+  {"q": "сколько стоит пакет теория плюс практика", "expect": ["iamlead-course-brochure"]},
+  {"q": "как описать инвариант агрегата", "expect": ["04-theory-ddd-ownership"]},
+  {"q": "что писать в Non-Goals", "expect": ["01-theory-problem-framing-prd"]},
+  {"q": "как проверить, что релиз безопасен", "expect": ["07-theory-testing-release-launch"]}
+]
